@@ -1,0 +1,14 @@
+avl.o
+avl.d
+main.o
+main.d
+scm.o
+scm.d
+shell.o
+shell.d
+system.o
+system.d
+term.o
+term.d
+utils.o
+utils.d

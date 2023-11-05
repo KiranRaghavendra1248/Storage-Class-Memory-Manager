@@ -1,0 +1,950 @@
+SCM Opening
+Truncating existing file
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+Malloc occured
+Storing size at address
+0x600000000003
+SCM Closing
