@@ -85,17 +85,27 @@ void printmem(void * p){
 /* get size from memory to load into scm struct*/
 size_t get_size(size_t * address){
     size_t size;
+    char buffer[200];
     size = *address;
-    print("Getting size at address");
+    snprintf(buffer, sizeof(buffer), "%lu", size);
+    print("Getting size =");
+    print(buffer);
+    print("At address =");
     printmem((void*)address);
+    print("------------------------------------------");
     return size;
 }
 
 /* put size into memory on 1st time init or whenever size change has occured*/
 void set_size(size_t * address, size_t size){
+    char buffer[200];
     *address = size;
-    print("Storing size at address");
+    snprintf(buffer, sizeof(buffer), "%lu", size);
+    print("Storing size =");
+    print(buffer);
+    print("At address =");
     printmem((void*)address);
+    print("------------------------------------------");
     return;
 }
 
