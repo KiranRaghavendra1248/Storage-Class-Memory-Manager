@@ -82,6 +82,12 @@ void printmem(void * p){
     fclose(f);
 }
 
+void printsize(size_t size){
+    char buffer[200];
+    snprintf(buffer, sizeof(buffer), "%lu", size);
+    print(buffer);
+}
+
 /* get size from memory to load into scm struct*/
 size_t get_size(size_t * address){
     size_t size;

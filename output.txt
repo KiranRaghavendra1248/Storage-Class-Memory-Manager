@@ -6,6 +6,8 @@ Storing size =
 At address =
 0x600000000003
 ------------------------------------------
+Metadata size
+11
 Malloc occured
 Storing size =
 24
@@ -36,30 +38,6 @@ Storing size =
 At address =
 0x600000000003
 ------------------------------------------
-Malloc occured
-Storing size =
-151
-At address =
-0x600000000003
-------------------------------------------
-Malloc occured
-Storing size =
-156
-At address =
-0x600000000003
-------------------------------------------
-Malloc occured
-Storing size =
-196
-At address =
-0x600000000003
-------------------------------------------
-Malloc occured
-Storing size =
-201
-At address =
-0x600000000003
-------------------------------------------
 SCM Closing
 SCM Opening
 Loading from file
@@ -68,20 +46,10 @@ Signature values
 187
 204
 Getting size =
-201
+111
 At address =
 0x600000000003
 ------------------------------------------
-Malloc occured
-Storing size =
-241
-At address =
-0x600000000003
-------------------------------------------
-Malloc occured
-Storing size =
-247
-At address =
-0x600000000003
-------------------------------------------
+Metadata size
+11
 SCM Closing

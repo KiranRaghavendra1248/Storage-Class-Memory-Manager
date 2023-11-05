@@ -141,6 +141,8 @@ struct scm *scm_open(const char *pathname, int truncate)
         size_t_ptr += 1;
         scmptr->base = (char *)size_t_ptr;
         scmptr->metadata += 1 * (sizeof(size_t));
+        print("Metadata size");
+        printsize(scmptr->metadata);
         return scmptr;
     } /* Else validate signature, load size from file, init everything else */
     else
@@ -171,8 +173,11 @@ struct scm *scm_open(const char *pathname, int truncate)
         size_t_ptr += 1;
         scmptr->base = (char *)size_t_ptr;
         scmptr->metadata += 1 * (sizeof(size_t));
+        print("Metadata size");
+        printsize(scmptr->metadata);
         return scmptr;
     }
+    
 }
 
 void *scm_malloc(struct scm *scm, size_t n)

@@ -12,5 +12,5 @@ int validate_signature(uint8_t *address);
 size_t string_length(const char* str);
 void print(char * s);
 void printmem(void * p);
-
+void printsize(size_t size);
 #endif /* _AVL_H_ */
