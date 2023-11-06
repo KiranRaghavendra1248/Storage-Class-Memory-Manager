@@ -155,13 +155,13 @@ int add_chunk(char* address, size_t old_chunk_size, size_t size){
     size_t *size_t_ptr;
     ssize_t new_chunk_size;
     uint8_t *uint8_t_ptr;
-    print("Adding new chunk");
+    new_chunk_size = (ssize_t)(old_chunk_size-size-(size_t)CHUNK_METADATA_SIZE);
+    if(new_chunk_size<=0){ /* if this condition is true, then it means old_chunk_size */
+        return -1;         /* is sufficient to accomodate size but not sufficient to */
+    }                       /* accomodate metadata of next chunk*/
+    print("Adding new metadata");
     print("At address");
     printmem(address);
-    new_chunk_size = (ssize_t)(old_chunk_size-size-(size_t)CHUNK_METADATA_SIZE);
-    if(new_chunk_size<0){
-        return 0;
-    }
     size_t_ptr = (size_t*)address;
     /* Set new chunk size*/
     set_size(size_t_ptr, new_chunk_size);

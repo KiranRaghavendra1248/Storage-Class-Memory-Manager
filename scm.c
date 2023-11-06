@@ -192,8 +192,8 @@ struct scm *scm_open(const char *pathname, int truncate)
 
 void *scm_malloc(struct scm *scm, size_t n)
 {
-    size_t *size_t_ptr, *traverse, chunk_size, *next_chunk_address, *curr_block_size_ptr;
-    bool chunk_used;
+    size_t *size_t_ptr, *traverse, chunk_size, *next_chunk_address, *curr_block_size_ptr=NULL;
+    bool chunk_used, overwrite_size=false;
     print("Malloc occured");
     scm->size += n;
 
@@ -209,23 +209,28 @@ void *scm_malloc(struct scm *scm, size_t n)
         chunk_used = check_used((uint8_t*)(traverse+1));
         curr_block_size_ptr = traverse;
         traverse = (size_t*)increment_by_chunk_metadata(traverse);
-        if((chunk_used==false)&&(chunk_size>n)){
+        if((chunk_used==false)&&(chunk_size>=n)){
             next_chunk_address = traverse  + n;
-            add_chunk((char*)next_chunk_address, chunk_size, n);
+            if(0==add_chunk((char*)next_chunk_address, chunk_size, n)){
+                overwrite_size = true; /* this means  chunk has been partioned, so overwrite size of current chunk*/
+            }
+            else{
+                overwrite_size = false; /* this means we had unsuccessful partion of current chunk -> give whole chunk for current request*/
+            }
             break;
         }
         else{
             traverse = traverse + chunk_size;
         }
     }
-    if(traverse==(size_t*)scm->base){
+    if(traverse>((size_t*)(scm->base+(scm->length-scm->metadata)))){
+        /*  crossed memory limits & did not find a suitable node*/
         return NULL;
     }
     else{
-        print("Printing base and return address from malloc");
-        printmem(scm->base);
-        printmem(traverse);
-        set_size(curr_block_size_ptr, n);
+        if(overwrite_size){
+            set_size(curr_block_size_ptr, n);
+        }
         set_used((uint8_t*)(curr_block_size_ptr+1), 250);
         return (void*)traverse;
     }
