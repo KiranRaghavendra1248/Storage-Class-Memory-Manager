@@ -1,10 +1,13 @@
 #define _GNU_SOURCE
+#define VIRT_ADDRESS 0x600000000000
+#define CHUNK_METADATA_SIZE 9
 
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdbool.h>
 #include "scm.h"
 
 /* create crc table*/
@@ -145,4 +148,67 @@ size_t string_length(const char* str){
         str++; /* Move the pointer to the next character */ 
     }
     return length;
+}
+
+/* add a chunk and metadata at given location*/
+int add_chunk(char* address, size_t old_chunk_size, size_t size){
+    size_t *size_t_ptr;
+    ssize_t new_chunk_size;
+    uint8_t *uint8_t_ptr;
+    print("Adding new chunk");
+    print("At address");
+    printmem(address);
+    new_chunk_size = (ssize_t)(old_chunk_size-size-(size_t)CHUNK_METADATA_SIZE);
+    if(new_chunk_size<0){
+        return 0;
+    }
+    size_t_ptr = (size_t*)address;
+    /* Set new chunk size*/
+    set_size(size_t_ptr, new_chunk_size);
+    size_t_ptr+=1;
+    uint8_t_ptr = (uint8_t*)size_t_ptr;
+    /* Set used flag*/
+    *uint8_t_ptr = 0;
+    return 0;
+}
+
+/* check if a chunk is used*/
+bool check_used(uint8_t * address){
+    uint8_t used;
+    char buffer[200];
+    used = *address;
+    snprintf(buffer, sizeof(buffer), "%d", used);
+    print("Getting used flag =");
+    print(buffer);
+    print("At address =");
+    printmem((void*)address);
+    print("------------------------------------------");
+    if(used==0){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+void set_used(uint8_t * address, uint8_t value){
+    char buffer[200];
+    *address = value;
+    snprintf(buffer, sizeof(buffer), "%d", value);
+    print("Storing flag =");
+    print(buffer);
+    print("At address =");
+    printmem((void*)address);
+    print("------------------------------------------");
+    return;
+}
+
+void* increment_by_chunk_metadata(void* address){
+    size_t *size_t_ptr;
+    uint8_t *uint8_t_ptr;
+    size_t_ptr = (size_t*)address;
+    size_t_ptr+=1;
+    uint8_t_ptr = (uint8_t*)size_t_ptr;
+    uint8_t_ptr+=1;
+    return (void*)uint8_t_ptr;
 }

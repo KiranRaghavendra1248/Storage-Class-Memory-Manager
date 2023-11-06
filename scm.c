@@ -6,11 +6,13 @@ https://stackoverflow.com/questions/6338162/what-is-program-break-where-does-it-
 
 #define _GNU_SOURCE
 #define VIRT_ADDRESS 0x600000000000
+#define CHUNK_METADATA_SIZE 9
 
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
 #include <unistd.h>
+#include <stdbool.h>
 #include <fcntl.h>
 #include "scm.h"
 #include "utils.h"
@@ -38,7 +40,7 @@ struct scm
 
 struct scm *scm_open(const char *pathname, int truncate)
 {
-    int fd;
+    int fd, flag;
     struct scm *scmptr;
     struct stat finfo;
     size_t file_length;
@@ -143,6 +145,14 @@ struct scm *scm_open(const char *pathname, int truncate)
         scmptr->metadata += 1 * (sizeof(size_t));
         print("Metadata size");
         printsize(scmptr->metadata);
+
+        /* add new chunk */
+        flag = add_chunk(scmptr->base,scmptr->length - scmptr->metadata, 0);
+        if(flag<0){
+            TRACE("Failed to add chunk");
+            FREE(scmptr);
+            return NULL;
+        }
         return scmptr;
     } /* Else validate signature, load size from file, init everything else */
     else
@@ -182,22 +192,47 @@ struct scm *scm_open(const char *pathname, int truncate)
 
 void *scm_malloc(struct scm *scm, size_t n)
 {
-    size_t size;
-    size_t *size_t_ptr;
+    size_t *size_t_ptr, *traverse, chunk_size, *next_chunk_address, *curr_block_size_ptr;
+    bool chunk_used;
     print("Malloc occured");
-    size = scm->size;
     scm->size += n;
 
     /* update size*/
     /* encode size to specified location*/
     size_t_ptr = (size_t *)scm->size_ptr;
     set_size(size_t_ptr, scm->size);
-    return (void *)(scm->base + size);
+
+    /* find suitable chunk*/
+    traverse = (size_t*)scm->base;
+    while(traverse<((size_t*)(scm->base+(scm->length-scm->metadata)))){
+        chunk_size = get_size(traverse);
+        chunk_used = check_used((uint8_t*)(traverse+1));
+        curr_block_size_ptr = traverse;
+        traverse = (size_t*)increment_by_chunk_metadata(traverse);
+        if((chunk_used==false)&&(chunk_size>n)){
+            next_chunk_address = traverse  + n;
+            add_chunk((char*)next_chunk_address, chunk_size, n);
+            break;
+        }
+        else{
+            traverse = traverse + chunk_size;
+        }
+    }
+    if(traverse==(size_t*)scm->base){
+        return NULL;
+    }
+    else{
+        print("Printing base and return address from malloc");
+        printmem(scm->base);
+        printmem(traverse);
+        set_size(curr_block_size_ptr, n);
+        set_used((uint8_t*)(curr_block_size_ptr+1), 250);
+        return (void*)traverse;
+    }
 }
 
-void *scm_mbase(struct scm *scm)
-{
-    return (void *)scm->base;
+void *scm_mbase(struct scm *scm){
+    return increment_by_chunk_metadata(scm->base);
 }
 
 size_t scm_capacity(const struct scm *scm)

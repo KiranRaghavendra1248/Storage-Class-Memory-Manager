@@ -13,4 +13,8 @@ size_t string_length(const char* str);
 void print(char * s);
 void printmem(void * p);
 void printsize(size_t size);
+int add_chunk(char* address, size_t old_chunk_size, size_t size);
+bool check_used(uint8_t * address);
+void set_used(uint8_t * address, uint8_t value);
+void* increment_by_chunk_metadata(void* address);
 #endif /* _AVL_H_ */

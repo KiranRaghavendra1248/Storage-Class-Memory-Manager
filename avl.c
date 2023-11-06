@@ -171,7 +171,7 @@ avl_open(const char *pathname, int truncate)
 			return NULL;
 		}
 		memset(avl->state, 0, sizeof (struct state));
-		assert( avl->state == scm_mbase(avl->scm) );
+		assert( avl->state == scm_mbase(avl->scm));
 	}
 	return avl;
 }

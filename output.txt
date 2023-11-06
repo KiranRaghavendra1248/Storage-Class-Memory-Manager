@@ -8,11 +8,50 @@ At address =
 ------------------------------------------
 Metadata size
 11
+Adding new chunk
+At address
+0x60000000000b
+Storing size =
+40959980
+At address =
+0x60000000000b
+------------------------------------------
 Malloc occured
 Storing size =
 24
 At address =
 0x600000000003
+------------------------------------------
+Getting size =
+40959980
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000013
+------------------------------------------
+Adding new chunk
+At address
+0x6000000000d4
+Storing size =
+40959947
+At address =
+0x6000000000d4
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x600000000014
+Storing size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000013
 ------------------------------------------
 Malloc occured
 Storing size =
@@ -20,11 +59,103 @@ Storing size =
 At address =
 0x600000000003
 ------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40959947
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000000dc
+------------------------------------------
+Adding new chunk
+At address
+0x60000000021d
+Storing size =
+40959898
+At address =
+0x60000000021d
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x6000000000dd
+Storing size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Storing flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
 Malloc occured
 Storing size =
 69
 At address =
 0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+40959898
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000225
+------------------------------------------
+Adding new chunk
+At address
+0x60000000024e
+Storing size =
+40959884
+At address =
+0x60000000024e
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x600000000226
+Storing size =
+5
+At address =
+0x60000000021d
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000225
 ------------------------------------------
 Malloc occured
 Storing size =
@@ -32,11 +163,327 @@ Storing size =
 At address =
 0x600000000003
 ------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+5
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+40959884
+At address =
+0x60000000024e
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000256
+------------------------------------------
+Adding new chunk
+At address
+0x600000000397
+Storing size =
+40959835
+At address =
+0x600000000397
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x600000000257
+Storing size =
+40
+At address =
+0x60000000024e
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000256
+------------------------------------------
 Malloc occured
 Storing size =
 111
 At address =
 0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+5
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+40
+At address =
+0x60000000024e
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000256
+------------------------------------------
+Getting size =
+40959835
+At address =
+0x600000000397
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x60000000039f
+------------------------------------------
+Adding new chunk
+At address
+0x6000000003b0
+Storing size =
+40959824
+At address =
+0x6000000003b0
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x6000000003a0
+Storing size =
+2
+At address =
+0x600000000397
+------------------------------------------
+Storing flag =
+250
+At address =
+0x60000000039f
+------------------------------------------
+Malloc occured
+Storing size =
+151
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+5
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+40
+At address =
+0x60000000024e
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000256
+------------------------------------------
+Getting size =
+2
+At address =
+0x600000000397
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x60000000039f
+------------------------------------------
+Getting size =
+40959824
+At address =
+0x6000000003b0
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000003b8
+------------------------------------------
+Adding new chunk
+At address
+0x6000000004f9
+Storing size =
+40959775
+At address =
+0x6000000004f9
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x6000000003b9
+Storing size =
+40
+At address =
+0x6000000003b0
+------------------------------------------
+Storing flag =
+250
+At address =
+0x6000000003b8
+------------------------------------------
+Malloc occured
+Storing size =
+156
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+5
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+40
+At address =
+0x60000000024e
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000256
+------------------------------------------
+Getting size =
+2
+At address =
+0x600000000397
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x60000000039f
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000003b0
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000003b8
+------------------------------------------
+Getting size =
+40959775
+At address =
+0x6000000004f9
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000501
+------------------------------------------
+Adding new chunk
+At address
+0x60000000052a
+Storing size =
+40959761
+At address =
+0x60000000052a
+------------------------------------------
+Printing base and return address from malloc
+0x60000000000b
+0x600000000502
+Storing size =
+5
+At address =
+0x6000000004f9
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000501
 ------------------------------------------
 SCM Closing
 SCM Opening
@@ -46,7 +493,7 @@ Signature values
 187
 204
 Getting size =
-111
+156
 At address =
 0x600000000003
 ------------------------------------------
