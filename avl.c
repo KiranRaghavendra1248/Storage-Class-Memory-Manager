@@ -300,18 +300,6 @@ static int max(int a, int b)
 	return (a > b) ? a : b;
 }
 
-static void free_node(struct node *node, struct scm *scm)
-{
-	if (!node)
-		return;
-
-	free_node(node->left, scm);
-	free_node(node->right, scm);
-
-	/*scm_free(scm, (void *)node->item);
-	scm_free(scm, node);*/
-}
-
 static struct node * delete_node(struct node *node, const char *item, struct scm *scm, struct avl *avl){
 	int cmp;
 	struct node *temp = NULL;
@@ -335,11 +323,13 @@ static struct node * delete_node(struct node *node, const char *item, struct scm
 			if (!node->left || !node->right)
 			{
 				temp = (node->left) ? node->left : node->right;
-				free_node(node, scm);
+				scm_free_const(scm,node->item);
+				scm_free(scm,node);
 				return temp;
 			}
 			else if (!node->left && !node->right){
-				free_node(node, scm);
+				scm_free_const(scm,node->item);
+				scm_free(scm,node);
 				return NULL;
 			}
 			else{
@@ -372,17 +362,22 @@ static struct node *remove_node(struct node *node, const char *item, struct scm 
 		if (node->count > 1)
 		{
 			node->count--;
+			avl->state->items-=1;
 		}
 		else
-		{
+		{	
+			avl->state->unique-=1;
+			avl->state->items-=1;
 			if (!node->left || !node->right)
 			{
 				temp = (node->left) ? node->left : node->right;
-				free_node(node, scm);
+				scm_free_const(scm,node->item);
+				scm_free(scm,node);
 				return temp;
 			}
 			else if (!node->left && !node->right){
-				free_node(node, scm);
+				scm_free_const(scm,node->item);
+				scm_free(scm,node);
 				return NULL;
 			}
 			else
@@ -439,8 +434,4 @@ void avl_remove(struct avl *avl, const char *item)
 
 	root = avl->state->root;
 	avl->state->root = remove_node(root, item, avl->scm, avl);
-	if (root != avl->state->root)
-	{
-		free_node(root, avl->scm);
-	}
 }
