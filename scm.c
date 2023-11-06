@@ -285,3 +285,22 @@ char *scm_strdup(struct scm *scm, const char *s)
     memcpy(new_string, s, length);
     return new_string;
 }
+
+void scm_free(struct scm *scm, void *p){
+    size_t *size_t_ptr, chunk_size, *total_size_ptr, total_size;
+    uint8_t *uint8_t_ptr;
+
+    /* set used = false*/
+    uint8_t_ptr = (uint8_t*)p;
+    uint8_t_ptr-=1;
+    set_used(uint8_t_ptr, 0);
+    /* get size*/
+    size_t_ptr = (size_t*)uint8_t_ptr;
+    size_t_ptr-=1;
+    chunk_size = get_size(size_t_ptr);
+
+    /* remove chunk size from total size*/
+    total_size = scm->size;
+    total_size_ptr = (size_t *)scm->size_ptr;
+    set_size(total_size_ptr, total_size-chunk_size);
+}

@@ -143,6 +143,7 @@ traverse(struct node *node, avl_fnc_t fnc, void *arg)
 	}
 }
 
+
 struct avl *
 avl_open(const char *pathname, int truncate)
 {
@@ -171,7 +172,7 @@ avl_open(const char *pathname, int truncate)
 			return NULL;
 		}
 		memset(avl->state, 0, sizeof (struct state));
-		assert( avl->state == scm_mbase(avl->scm));
+		assert( avl->state == scm_mbase(avl->scm) );
 	}
 	return avl;
 }
@@ -260,4 +261,173 @@ avl_scm_capacity(const struct avl *avl)
 	assert( avl );
 
 	return scm_capacity(avl->scm);
+}
+
+static struct node *find_min_node(struct node *node) {
+    while (node && node->left != NULL) {
+        node = node->left;
+    }
+    return node;
+}
+
+static int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+
+/*static void free_node(struct node *node, struct scm *scm) {
+    if (!node) return;
+
+    free_node(node->left, scm);
+    free_node(node->right, scm);
+
+   scm_free(scm, (void *)node->item);
+    scm_free(scm, node);
+}
+
+
+static struct node *remove_node(struct node *node, const char *item, struct scm *scm, struct avl *avl) {
+    int cmp;
+    struct node *temp;
+    int bal;
+
+    if (!node) return node;
+
+    cmp  = strcmp(item, node->item);
+    if (cmp < 0) {
+        node->left = remove_node(node->left, item, scm, avl);
+    } else if (cmp > 0) {
+        node->right = remove_node(node->right, item, scm, avl);
+    } else {
+        if (node->count > 1) {
+            node->count--;
+        } else {
+            if (!node->left || !node->right) {
+                temp = (node->left) ? node->left : node->right;
+                if (!temp) {
+                    temp = node;
+                    node = NULL;
+                } else {
+                    *node = *temp;
+                }
+                free_node(temp, avl->scm);
+            } else {
+                temp = find_min_node(node->right);
+                node->item = temp->item;
+                node->count = temp->count;
+                node->right = remove_node(node->right, temp->item, scm, avl);
+            }
+        }
+    }
+
+    if (node) {
+        node->depth = 1 + max(delta(node->left), delta(node->right));
+        bal = balance(node);
+
+        if (bal > 1) {
+            if (balance(node->left) >= 0) {
+                return rotate_right(node);
+            } else {
+                node->left = rotate_left(node->left);
+                return rotate_right(node);
+            }
+        }
+
+        if (bal < -1) {
+            if (balance(node->right) <= 0) {
+                return rotate_left(node);
+            } else {
+                node->right = rotate_right(node->right);
+                return rotate_left(node);
+            }
+        }
+    }
+
+    return node;
+}
+
+
+void avl_remove(struct avl *avl, const char *item) {
+    struct node *root;
+    if (!avl) return;
+
+    root = avl->state->root;
+    avl->state->root = remove_node(root, item, avl->scm,avl);
+}*/
+
+static void free_node(struct node *node, struct scm *scm) {
+    if (!node) return;
+
+    free_node(node->left, scm);
+    free_node(node->right, scm);
+
+    /*scm_free(scm, (void *)node->item);
+    scm_free(scm, node);*/
+}
+
+static struct node *remove_node(struct node *node, const char *item, struct scm *scm, struct avl *avl) {
+    int cmp;
+    int bal;
+    struct node *temp= NULL;
+    if (!node) return node;
+
+    cmp = strcmp(item, node->item);
+
+    if (cmp < 0) {
+        node->left = remove_node(node->left, item, scm, avl);
+    } else if (cmp > 0) {
+        node->right = remove_node(node->right, item, scm, avl);
+    } else {
+        if (node->count > 1) {
+            node->count--;
+        } else {
+            if (!node->left || !node->right) {
+                temp = (node->left) ? node->left : node->right;
+                free_node(node, scm);
+                return temp;
+            } else {
+                temp = find_min_node(node->right);
+                node->item = temp->item;
+                node->count = temp->count;
+                node->right = remove_node(node->right, temp->item, scm, avl);
+            }
+        }
+    }
+
+    node->depth = 1 + max(delta(node->left), delta(node->right));
+    bal = balance(node);
+
+    if (bal > 1) {
+        if (balance(node->left) >= 0) {
+            return rotate_right(node);
+        } else {
+            node->left = rotate_left(node->left);
+            return rotate_right(node);
+        }
+    }
+
+    if (bal < -1) {
+        if (balance(node->right) <= 0) {
+            return rotate_left(node);
+        } else {
+            node->right = rotate_right(node->right);
+            return rotate_left(node);
+        }
+    }
+    if (node == avl->state->root) {
+        avl->state->root = node;
+    }
+
+    return node;
+}
+
+void avl_remove(struct avl *avl, const char *item) {
+    struct node *root;
+    if (!avl) return;
+
+    root = avl->state->root;
+    avl->state->root = remove_node(root, item, avl->scm, avl);
+    if (root != avl->state->root) {
+        free_node(root, avl->scm);
+    }
 }
