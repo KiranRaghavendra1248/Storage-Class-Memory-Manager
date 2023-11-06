@@ -106,6 +106,7 @@ help(struct avl *avl, const char *s)
 	       "  load pathname : load words from file @ 'pathname'\n"
 	       "  insert word   : insert 'word'\n"
 	       "  exists word   : check if 'word' exists\n"
+	       "  remove word   : Remove a single word if exists\n"
 	       "\n");
 	return 0;
 }
@@ -118,6 +119,12 @@ quit(struct avl *avl, const char *s)
 
 	return 1;
 }
+
+static int remove_command(struct avl *avl, const char *s) {
+    avl_remove(avl, s);
+    return 0;
+}
+
 
 static int
 shell_fnc(void *arg, const char *s)
@@ -133,7 +140,8 @@ shell_fnc(void *arg, const char *s)
 		{ 0, "list", list },
 		{ 1, "load", load },
 		{ 1, "insert", insert },
-		{ 1, "exists", exists }
+		{ 1, "exists", exists },
+		{ 1, "remove", remove_command }
 	};
 	struct avl *avl;
 	uint64_t i;

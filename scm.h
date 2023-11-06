@@ -99,4 +99,7 @@ size_t scm_capacity(const struct scm *scm);
 
 void *scm_mbase(struct scm *scm);
 
+
+void scm_free_const(struct scm *scm, const void *p);
+
 #endif /* _SCM_H_ */

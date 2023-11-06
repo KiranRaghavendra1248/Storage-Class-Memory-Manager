@@ -194,7 +194,8 @@ void *scm_malloc(struct scm *scm, size_t n)
 {
     size_t *size_t_ptr, *traverse, chunk_size, *next_chunk_address, *curr_block_size_ptr=NULL;
     bool chunk_used, overwrite_size=false;
-    print("Malloc occured");
+    print("Malloc occured for size =");
+    printsize(n);
     scm->size += n;
 
     /* update size*/
@@ -232,6 +233,8 @@ void *scm_malloc(struct scm *scm, size_t n)
             set_size(curr_block_size_ptr, n);
         }
         set_used((uint8_t*)(curr_block_size_ptr+1), 250);
+        print("Dynamic mem allocated at address :");
+        printmem(traverse);
         return (void*)traverse;
     }
 }
@@ -284,4 +287,64 @@ char *scm_strdup(struct scm *scm, const char *s)
     new_string = (char *)scm_malloc(scm, length);
     memcpy(new_string, s, length);
     return new_string;
+}
+
+void scm_free(struct scm *scm, void *p){
+    size_t *size_t_ptr, chunk_size, *total_size_ptr, total_size;
+    uint8_t *uint8_t_ptr;
+
+    /* set used = false*/
+    uint8_t_ptr = (uint8_t*)p;
+    uint8_t_ptr-=1;
+    set_used(uint8_t_ptr, 0);
+    /* get size*/
+    size_t_ptr = (size_t*)uint8_t_ptr;
+    size_t_ptr-=1;
+    chunk_size = get_size(size_t_ptr);
+
+    /* Log shit*/
+    print("Freeing size");
+    printsize(chunk_size);
+    print("Freeing dynamic mem allocated at");
+    printmem(p);
+
+    /* remove chunk size from total size*/
+    total_size = scm->size;
+    total_size_ptr = (size_t *)scm->size_ptr;
+    scm->size-=chunk_size;
+    /* Store new size to file as well*/
+    set_size(total_size_ptr, total_size-chunk_size);
+    print("Setting new size used");
+    printsize(total_size-chunk_size);
+    print("At address");
+    printmem(total_size_ptr);
+}
+
+void scm_free_const(struct scm *scm, const void *p){
+    size_t *size_t_ptr, chunk_size, *total_size_ptr, total_size;
+    uint8_t *uint8_t_ptr;
+
+    /* set used = false*/
+    uint8_t_ptr = (uint8_t*)p;
+    uint8_t_ptr-=1;
+    set_used(uint8_t_ptr, 0);
+    /* get size*/
+    size_t_ptr = (size_t*)uint8_t_ptr;
+    size_t_ptr-=1;
+    chunk_size = get_size(size_t_ptr);
+
+    /* Log shit*/
+    print("Freeing dynamic mem allocated for string of size");
+    printsize(chunk_size);
+
+    /* remove chunk size from total size*/
+    total_size = scm->size;
+    total_size_ptr = (size_t *)scm->size_ptr;
+    scm->size-=chunk_size;
+    /* Store new size to file as well*/
+    set_size(total_size_ptr, total_size-chunk_size);
+    print("Setting new size used");
+    printsize(total_size-chunk_size);
+    print("At address");
+    printmem(total_size_ptr);
 }
