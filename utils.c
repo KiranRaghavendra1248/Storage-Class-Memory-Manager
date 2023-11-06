@@ -147,7 +147,7 @@ size_t string_length(const char* str){
         length++;
         str++; /* Move the pointer to the next character */ 
     }
-    return length;
+    return length+1;
 }
 
 /* add a chunk and metadata at given location*/

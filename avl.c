@@ -7,14 +7,19 @@
  * avl.c
  */
 
+#include <stdbool.h>
 #include "scm.h"
 #include "avl.h"
+#include "utils.h"
 
-struct avl {
-	struct state {
+struct avl
+{
+	struct state
+	{
 		uint64_t items;
 		uint64_t unique;
-		struct node {
+		struct node
+		{
 			int depth;
 			uint64_t count;
 			const char *item;
@@ -88,13 +93,16 @@ update(struct avl *avl, struct node *root, const char *item)
 {
 	int d;
 
-	if (!root) {
-		if (!(root = scm_malloc(avl->scm, sizeof (struct node)))) {
+	if (!root)
+	{
+		if (!(root = scm_malloc(avl->scm, sizeof(struct node))))
+		{
 			TRACE(0);
 			return NULL;
 		}
-		memset(root, 0, sizeof (struct node));
-		if (!(root->item = scm_strdup(avl->scm, item))) {
+		memset(root, 0, sizeof(struct node));
+		if (!(root->item = scm_strdup(avl->scm, item)))
+		{
 			TRACE(0);
 			return NULL;
 		}
@@ -103,28 +111,37 @@ update(struct avl *avl, struct node *root, const char *item)
 		++avl->state->unique;
 		return root;
 	}
-	if (!(d = strcmp(item, root->item))) {
+	if (!(d = strcmp(item, root->item)))
+	{
 		++root->count;
 		++avl->state->items;
 	}
-	else if (0 > d) {
+	else if (0 > d)
+	{
 		root->left = update(avl, root->left, item);
-		if (1 < abs(balance(root))) {
-			if (0 > strcmp(item, root->left->item)) {
+		if (1 < abs(balance(root)))
+		{
+			if (0 > strcmp(item, root->left->item))
+			{
 				root = rotate_right(root);
 			}
-			else {
+			else
+			{
 				root = rotate_left_right(root);
 			}
 		}
 	}
-	else if (0 < d) {
+	else if (0 < d)
+	{
 		root->right = update(avl, root->right, item);
-		if (1 < abs(balance(root))) {
-			if (0 < strcmp(item, root->right->item)) {
+		if (1 < abs(balance(root)))
+		{
+			if (0 < strcmp(item, root->right->item))
+			{
 				root = rotate_left(root);
 			}
-			else {
+			else
+			{
 				root = rotate_right_left(root);
 			}
 		}
@@ -136,66 +153,71 @@ update(struct avl *avl, struct node *root, const char *item)
 static void
 traverse(struct node *node, avl_fnc_t fnc, void *arg)
 {
-	if (node) {
+	if (node)
+	{
 		traverse(node->left, fnc, arg);
 		fnc(arg, node->item, node->count);
 		traverse(node->right, fnc, arg);
 	}
 }
 
-
 struct avl *
 avl_open(const char *pathname, int truncate)
 {
 	struct avl *avl;
 
-	assert( pathname );
+	assert(pathname);
 
-	if (!(avl = malloc(sizeof (struct avl)))) {
+	if (!(avl = malloc(sizeof(struct avl))))
+	{
 		TRACE("out of memory");
 		return NULL;
 	}
-	memset(avl, 0, sizeof (struct avl));
-	if (!(avl->scm = scm_open(pathname, truncate))) {
+	memset(avl, 0, sizeof(struct avl));
+	if (!(avl->scm = scm_open(pathname, truncate)))
+	{
 		avl_close(avl);
 		TRACE(0);
 		return NULL;
 	}
-	if (scm_utilized(avl->scm)) {
+	if (scm_utilized(avl->scm))
+	{
 		avl->state = scm_mbase(avl->scm);
 	}
-	else {
+	else
+	{
 		if (!(avl->state = scm_malloc(avl->scm,
-					      sizeof (struct state)))) {
+									  sizeof(struct state))))
+		{
 			avl_close(avl);
 			TRACE(0);
 			return NULL;
 		}
-		memset(avl->state, 0, sizeof (struct state));
-		assert( avl->state == scm_mbase(avl->scm) );
+		memset(avl->state, 0, sizeof(struct state));
+		assert(avl->state == scm_mbase(avl->scm));
 	}
 	return avl;
 }
 
-void
-avl_close(struct avl *avl)
+void avl_close(struct avl *avl)
 {
-	if (avl) {
+	if (avl)
+	{
 		scm_close(avl->scm);
-		memset(avl, 0, sizeof (struct avl));
+		memset(avl, 0, sizeof(struct avl));
 	}
 	FREE(avl);
 }
 
-int
-avl_insert(struct avl *avl, const char *item)
+int avl_insert(struct avl *avl, const char *item)
 {
 	struct node *root;
 
-	assert( avl );
-	assert( safe_strlen(item) );
+	assert(avl);
+	assert(safe_strlen(item));
 
-	if (!(root = update(avl, avl->state->root, item))) {
+	if (!(root = update(avl, avl->state->root, item)))
+	{
 		TRACE(0);
 		return -1;
 	}
@@ -209,12 +231,14 @@ avl_exists(const struct avl *avl, const char *item)
 	const struct node *node;
 	int d;
 
-	assert( avl );
-	assert( safe_strlen(item) );
+	assert(avl);
+	assert(safe_strlen(item));
 
 	node = avl->state->root;
-	while (node) {
-		if (!(d = strcmp(item, node->item))) {
+	while (node)
+	{
+		if (!(d = strcmp(item, node->item)))
+		{
 			return node->count;
 		}
 		node = (0 > d) ? node->left : node->right;
@@ -222,11 +246,10 @@ avl_exists(const struct avl *avl, const char *item)
 	return 0;
 }
 
-void
-avl_traverse(const struct avl *avl, avl_fnc_t fnc, void *arg)
+void avl_traverse(const struct avl *avl, avl_fnc_t fnc, void *arg)
 {
-	assert( avl );
-	assert( fnc );
+	assert(avl);
+	assert(fnc);
 
 	traverse(avl->state->root, fnc, arg);
 }
@@ -234,7 +257,7 @@ avl_traverse(const struct avl *avl, avl_fnc_t fnc, void *arg)
 uint64_t
 avl_items(const struct avl *avl)
 {
-	assert( avl );
+	assert(avl);
 
 	return avl->state->items;
 }
@@ -242,7 +265,7 @@ avl_items(const struct avl *avl)
 uint64_t
 avl_unique(const struct avl *avl)
 {
-	assert( avl );
+	assert(avl);
 
 	return avl->state->unique;
 }
@@ -250,7 +273,7 @@ avl_unique(const struct avl *avl)
 size_t
 avl_scm_utilized(const struct avl *avl)
 {
-	assert( avl );
+	assert(avl);
 
 	return scm_utilized(avl->scm);
 }
@@ -258,176 +281,166 @@ avl_scm_utilized(const struct avl *avl)
 size_t
 avl_scm_capacity(const struct avl *avl)
 {
-	assert( avl );
+	assert(avl);
 
 	return scm_capacity(avl->scm);
 }
 
-static struct node *find_min_node(struct node *node) {
-    while (node && node->left != NULL) {
-        node = node->left;
-    }
-    return node;
+static struct node *find_min_node(struct node *node)
+{
+	while (node && node->left != NULL)
+	{
+		node = node->left;
+	}
+	return node;
 }
 
-static int max(int a, int b) {
-    return (a > b) ? a : b;
+static int max(int a, int b)
+{
+	return (a > b) ? a : b;
 }
 
+static void free_node(struct node *node, struct scm *scm)
+{
+	if (!node)
+		return;
 
-/*static void free_node(struct node *node, struct scm *scm) {
-    if (!node) return;
+	free_node(node->left, scm);
+	free_node(node->right, scm);
 
-    free_node(node->left, scm);
-    free_node(node->right, scm);
-
-   scm_free(scm, (void *)node->item);
-    scm_free(scm, node);
+	/*scm_free(scm, (void *)node->item);
+	scm_free(scm, node);*/
 }
 
+static struct node * delete_node(struct node *node, const char *item, struct scm *scm, struct avl *avl){
+	int cmp;
+	struct node *temp = NULL;
+	if (!node)
+		return node;
 
-static struct node *remove_node(struct node *node, const char *item, struct scm *scm, struct avl *avl) {
-    int cmp;
-    struct node *temp;
-    int bal;
+	cmp = strcmp(item, node->item);
 
-    if (!node) return node;
-
-    cmp  = strcmp(item, node->item);
-    if (cmp < 0) {
-        node->left = remove_node(node->left, item, scm, avl);
-    } else if (cmp > 0) {
-        node->right = remove_node(node->right, item, scm, avl);
-    } else {
-        if (node->count > 1) {
-            node->count--;
-        } else {
-            if (!node->left || !node->right) {
-                temp = (node->left) ? node->left : node->right;
-                if (!temp) {
-                    temp = node;
-                    node = NULL;
-                } else {
-                    *node = *temp;
-                }
-                free_node(temp, avl->scm);
-            } else {
-                temp = find_min_node(node->right);
-                node->item = temp->item;
-                node->count = temp->count;
-                node->right = remove_node(node->right, temp->item, scm, avl);
-            }
-        }
-    }
-
-    if (node) {
-        node->depth = 1 + max(delta(node->left), delta(node->right));
-        bal = balance(node);
-
-        if (bal > 1) {
-            if (balance(node->left) >= 0) {
-                return rotate_right(node);
-            } else {
-                node->left = rotate_left(node->left);
-                return rotate_right(node);
-            }
-        }
-
-        if (bal < -1) {
-            if (balance(node->right) <= 0) {
-                return rotate_left(node);
-            } else {
-                node->right = rotate_right(node->right);
-                return rotate_left(node);
-            }
-        }
-    }
-
-    return node;
+	if (cmp < 0)
+	{
+		delete_node(node->left, item, scm, avl);
+		return node;
+	}
+	else if (cmp > 0)
+	{
+		delete_node(node->right, item, scm, avl);
+		return node;
+	}
+	else
+	{
+			if (!node->left || !node->right)
+			{
+				temp = (node->left) ? node->left : node->right;
+				free_node(node, scm);
+				return temp;
+			}
+			else if (!node->left && !node->right){
+				free_node(node, scm);
+				return NULL;
+			}
+			else{
+				print("Error : Min Node chosen for deletion has 2 children");
+				return NULL;
+			}
+		}
 }
 
+static struct node *remove_node(struct node *node, const char *item, struct scm *scm, struct avl *avl)
+{
+	int cmp;
+	int bal;
+	struct node *temp = NULL;
+	if (!node)
+		return node;
 
-void avl_remove(struct avl *avl, const char *item) {
-    struct node *root;
-    if (!avl) return;
+	cmp = strcmp(item, node->item);
 
-    root = avl->state->root;
-    avl->state->root = remove_node(root, item, avl->scm,avl);
-}*/
+	if (cmp < 0)
+	{
+		node->left = remove_node(node->left, item, scm, avl);
+	}
+	else if (cmp > 0)
+	{
+		node->right = remove_node(node->right, item, scm, avl);
+	}
+	else
+	{
+		if (node->count > 1)
+		{
+			node->count--;
+		}
+		else
+		{
+			if (!node->left || !node->right)
+			{
+				temp = (node->left) ? node->left : node->right;
+				free_node(node, scm);
+				return temp;
+			}
+			else if (!node->left && !node->right){
+				free_node(node, scm);
+				return NULL;
+			}
+			else
+			{
+				temp = find_min_node(node->right);
+				node->item = temp->item;
+				node->count = temp->count;
+				node->right = delete_node(node->right, temp->item, scm, avl);
+			}
+		}
+	}
 
-static void free_node(struct node *node, struct scm *scm) {
-    if (!node) return;
+	node->depth = 1 + max(delta(node->left), delta(node->right));
+	bal = balance(node);
 
-    free_node(node->left, scm);
-    free_node(node->right, scm);
+	if (bal > 1)
+	{
+		if (balance(node->left) >= 0)
+		{
+			return rotate_right(node);
+		}
+		else
+		{
+			node->left = rotate_left(node->left);
+			return rotate_right(node);
+		}
+	}
 
-    /*scm_free(scm, (void *)node->item);
-    scm_free(scm, node);*/
+	if (bal < -1)
+	{
+		if (balance(node->right) <= 0)
+		{
+			return rotate_left(node);
+		}
+		else
+		{
+			node->right = rotate_right(node->right);
+			return rotate_left(node);
+		}
+	}
+	if (node == avl->state->root)
+	{
+		avl->state->root = node;
+	}
+
+	return node;
 }
 
-static struct node *remove_node(struct node *node, const char *item, struct scm *scm, struct avl *avl) {
-    int cmp;
-    int bal;
-    struct node *temp= NULL;
-    if (!node) return node;
+void avl_remove(struct avl *avl, const char *item)
+{
+	struct node *root;
+	if (!avl)
+		return;
 
-    cmp = strcmp(item, node->item);
-
-    if (cmp < 0) {
-        node->left = remove_node(node->left, item, scm, avl);
-    } else if (cmp > 0) {
-        node->right = remove_node(node->right, item, scm, avl);
-    } else {
-        if (node->count > 1) {
-            node->count--;
-        } else {
-            if (!node->left || !node->right) {
-                temp = (node->left) ? node->left : node->right;
-                free_node(node, scm);
-                return temp;
-            } else {
-                temp = find_min_node(node->right);
-                node->item = temp->item;
-                node->count = temp->count;
-                node->right = remove_node(node->right, temp->item, scm, avl);
-            }
-        }
-    }
-
-    node->depth = 1 + max(delta(node->left), delta(node->right));
-    bal = balance(node);
-
-    if (bal > 1) {
-        if (balance(node->left) >= 0) {
-            return rotate_right(node);
-        } else {
-            node->left = rotate_left(node->left);
-            return rotate_right(node);
-        }
-    }
-
-    if (bal < -1) {
-        if (balance(node->right) <= 0) {
-            return rotate_left(node);
-        } else {
-            node->right = rotate_right(node->right);
-            return rotate_left(node);
-        }
-    }
-    if (node == avl->state->root) {
-        avl->state->root = node;
-    }
-
-    return node;
-}
-
-void avl_remove(struct avl *avl, const char *item) {
-    struct node *root;
-    if (!avl) return;
-
-    root = avl->state->root;
-    avl->state->root = remove_node(root, item, avl->scm, avl);
-    if (root != avl->state->root) {
-        free_node(root, avl->scm);
-    }
+	root = avl->state->root;
+	avl->state->root = remove_node(root, item, avl->scm, avl);
+	if (root != avl->state->root)
+	{
+		free_node(root, avl->scm);
+	}
 }
