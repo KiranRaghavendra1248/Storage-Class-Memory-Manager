@@ -383,7 +383,8 @@ static struct node *remove_node(struct node *node, const char *item, struct scm 
 			else
 			{
 				temp = find_min_node(node->right);
-				node->item = temp->item;
+				scm_free_const(avl->scm, node->item);
+				node->item = scm_strdup(avl->scm,temp->item);
 				node->count = temp->count;
 				node->right = delete_node(node->right, temp->item, scm, avl);
 			}
