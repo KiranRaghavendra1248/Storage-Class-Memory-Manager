@@ -53,6 +53,7 @@ At address =
 ------------------------------------------
 Dynamic mem allocated at address :
 0x600000000014
+------------------------------------------
 Malloc occured for size =
 40
 Storing size =
@@ -100,10 +101,11 @@ At address =
 ------------------------------------------
 Dynamic mem allocated at address :
 0x6000000000dd
+------------------------------------------
 Malloc occured for size =
-4
+16
 Storing size =
-68
+80
 At address =
 0x600000000003
 ------------------------------------------
@@ -139,9 +141,295 @@ At address =
 ------------------------------------------
 Adding new metadata
 At address
+0x6000000002a6
+Storing size =
+40959873
+At address =
+0x6000000002a6
+------------------------------------------
+Storing size =
+16
+At address =
+0x60000000021d
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Dynamic mem allocated at address :
+0x600000000226
+------------------------------------------
+Malloc occured for size =
+40
+Storing size =
+120
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+16
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+40959873
+At address =
+0x6000000002a6
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000002ae
+------------------------------------------
+Adding new metadata
+At address
+0x6000000003ef
+Storing size =
+40959824
+At address =
+0x6000000003ef
+------------------------------------------
+Storing size =
+40
+At address =
+0x6000000002a6
+------------------------------------------
+Storing flag =
+250
+At address =
+0x6000000002ae
+------------------------------------------
+Dynamic mem allocated at address :
+0x6000000002af
+------------------------------------------
+Malloc occured for size =
+6
+Storing size =
+126
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+16
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000002a6
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000002ae
+------------------------------------------
+Getting size =
+40959824
+At address =
+0x6000000003ef
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000003f7
+------------------------------------------
+Adding new metadata
+At address
+0x600000000428
+Storing size =
+40959809
+At address =
+0x600000000428
+------------------------------------------
+Storing size =
+6
+At address =
+0x6000000003ef
+------------------------------------------
+Storing flag =
+250
+At address =
+0x6000000003f7
+------------------------------------------
+Dynamic mem allocated at address :
+0x6000000003f8
+------------------------------------------
+Storing flag =
+0
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+16
+At address =
+0x60000000021d
+------------------------------------------
+Freeing dynamic mem allocated for string of size
+16
+Stored at
+0x600000000226
+Storing size =
+110
+At address =
+0x600000000003
+------------------------------------------
+Setting new size used
+110
+At address
+0x600000000003
+Storing flag =
+0
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Freeing size
+40
+Freeing dynamic mem allocated at
+0x6000000000dd
+------------------------------------------
+Storing size =
+70
+At address =
+0x600000000003
+------------------------------------------
+Setting new size used
+70
+At address
+0x600000000003
+Malloc occured for size =
+40
+Storing size =
+110
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000000dc
+------------------------------------------
+Storing flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Dynamic mem allocated at address :
+0x6000000000dd
+------------------------------------------
+Malloc occured for size =
+4
+Storing size =
+114
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+16
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000225
+------------------------------------------
+Adding new metadata
+At address
 0x600000000246
 Storing size =
-40959885
+3
 At address =
 0x600000000246
 ------------------------------------------
@@ -157,10 +445,11 @@ At address =
 ------------------------------------------
 Dynamic mem allocated at address :
 0x600000000226
+------------------------------------------
 Malloc occured for size =
 40
 Storing size =
-108
+154
 At address =
 0x600000000003
 ------------------------------------------
@@ -195,7 +484,7 @@ At address =
 0x600000000225
 ------------------------------------------
 Getting size =
-40959885
+3
 At address =
 0x600000000246
 ------------------------------------------
@@ -204,18 +493,173 @@ Getting used flag =
 At address =
 0x60000000024e
 ------------------------------------------
+Getting size =
+0
+At address =
+0x600000000267
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x60000000026f
+------------------------------------------
+Getting size =
+0
+At address =
+0x600000000270
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000278
+------------------------------------------
+Getting size =
+0
+At address =
+0x600000000279
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000281
+------------------------------------------
+Getting size =
+0
+At address =
+0x600000000282
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x60000000028a
+------------------------------------------
+Getting size =
+0
+At address =
+0x60000000028b
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000293
+------------------------------------------
+Getting size =
+0
+At address =
+0x600000000294
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x60000000029c
+------------------------------------------
+Getting size =
+0
+At address =
+0x60000000029d
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000002a5
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000002a6
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000002ae
+------------------------------------------
+Getting size =
+6
+At address =
+0x6000000003ef
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000003f7
+------------------------------------------
+Getting size =
+40959809
+At address =
+0x600000000428
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000430
+------------------------------------------
 Adding new metadata
 At address
-0x60000000038f
+0x600000000571
 Storing size =
-40959836
+40959760
 At address =
-0x60000000038f
+0x600000000571
 ------------------------------------------
 Storing size =
 40
 At address =
+0x600000000428
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000430
+------------------------------------------
+Dynamic mem allocated at address :
+0x600000000431
+------------------------------------------
+Malloc occured for size =
+2
+Storing size =
+156
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+4
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Getting size =
+3
+At address =
 0x600000000246
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x60000000024e
 ------------------------------------------
 Storing flag =
 250
@@ -224,83 +668,54 @@ At address =
 ------------------------------------------
 Dynamic mem allocated at address :
 0x60000000024f
-Malloc occured for size =
-4
-Storing size =
-112
-At address =
-0x600000000003
 ------------------------------------------
-Getting size =
-24
+Storing flag =
+0
 At address =
-0x60000000000b
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000013
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000000d4
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000000dc
+0x600000000225
 ------------------------------------------
 Getting size =
 4
 At address =
 0x60000000021d
 ------------------------------------------
-Getting used flag =
-250
+Freeing dynamic mem allocated for string of size
+4
+Stored at
+0x600000000226
+Storing size =
+152
 At address =
-0x600000000225
+0x600000000003
+------------------------------------------
+Setting new size used
+152
+At address
+0x600000000003
+Storing flag =
+0
+At address =
+0x6000000000dc
 ------------------------------------------
 Getting size =
 40
 At address =
-0x600000000246
+0x6000000000d4
 ------------------------------------------
-Getting used flag =
-250
+Freeing size
+40
+Freeing dynamic mem allocated at
+0x6000000000dd
+------------------------------------------
+Storing size =
+112
 At address =
-0x60000000024e
+0x600000000003
 ------------------------------------------
-Getting size =
-40959836
-At address =
-0x60000000038f
-------------------------------------------
-Getting used flag =
-0
-At address =
-0x600000000397
-------------------------------------------
-Adding new metadata
+Setting new size used
+112
 At address
-0x6000000003b8
-Storing size =
-40959823
-At address =
-0x6000000003b8
-------------------------------------------
-Storing size =
-4
-At address =
-0x60000000038f
-------------------------------------------
-Storing flag =
-250
-At address =
-0x600000000397
-------------------------------------------
-Dynamic mem allocated at address :
-0x600000000398
+0x600000000003
 Malloc occured for size =
 40
 Storing size =
@@ -324,458 +739,6 @@ At address =
 0x6000000000d4
 ------------------------------------------
 Getting used flag =
-250
-At address =
-0x6000000000dc
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000021d
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000225
-------------------------------------------
-Getting size =
-40
-At address =
-0x600000000246
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x60000000024e
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000038f
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000397
-------------------------------------------
-Getting size =
-40959823
-At address =
-0x6000000003b8
-------------------------------------------
-Getting used flag =
-0
-At address =
-0x6000000003c0
-------------------------------------------
-Adding new metadata
-At address
-0x600000000501
-Storing size =
-40959774
-At address =
-0x600000000501
-------------------------------------------
-Storing size =
-40
-At address =
-0x6000000003b8
-------------------------------------------
-Storing flag =
-250
-At address =
-0x6000000003c0
-------------------------------------------
-Dynamic mem allocated at address :
-0x6000000003c1
-Malloc occured for size =
-4
-Storing size =
-156
-At address =
-0x600000000003
-------------------------------------------
-Getting size =
-24
-At address =
-0x60000000000b
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000013
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000000d4
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000000dc
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000021d
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000225
-------------------------------------------
-Getting size =
-40
-At address =
-0x600000000246
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x60000000024e
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000038f
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000397
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000003b8
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000003c0
-------------------------------------------
-Getting size =
-40959774
-At address =
-0x600000000501
-------------------------------------------
-Getting used flag =
-0
-At address =
-0x600000000509
-------------------------------------------
-Adding new metadata
-At address
-0x60000000052a
-Storing size =
-40959761
-At address =
-0x60000000052a
-------------------------------------------
-Storing size =
-4
-At address =
-0x600000000501
-------------------------------------------
-Storing flag =
-250
-At address =
-0x600000000509
-------------------------------------------
-Dynamic mem allocated at address :
-0x60000000050a
-Malloc occured for size =
-40
-Storing size =
-196
-At address =
-0x600000000003
-------------------------------------------
-Getting size =
-24
-At address =
-0x60000000000b
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000013
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000000d4
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000000dc
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000021d
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000225
-------------------------------------------
-Getting size =
-40
-At address =
-0x600000000246
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x60000000024e
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000038f
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000397
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000003b8
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000003c0
-------------------------------------------
-Getting size =
-4
-At address =
-0x600000000501
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000509
-------------------------------------------
-Getting size =
-40959761
-At address =
-0x60000000052a
-------------------------------------------
-Getting used flag =
-0
-At address =
-0x600000000532
-------------------------------------------
-Adding new metadata
-At address
-0x600000000673
-Storing size =
-40959712
-At address =
-0x600000000673
-------------------------------------------
-Storing size =
-40
-At address =
-0x60000000052a
-------------------------------------------
-Storing flag =
-250
-At address =
-0x600000000532
-------------------------------------------
-Dynamic mem allocated at address :
-0x600000000533
-Malloc occured for size =
-4
-Storing size =
-200
-At address =
-0x600000000003
-------------------------------------------
-Getting size =
-24
-At address =
-0x60000000000b
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000013
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000000d4
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000000dc
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000021d
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000225
-------------------------------------------
-Getting size =
-40
-At address =
-0x600000000246
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x60000000024e
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000038f
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000397
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000003b8
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x6000000003c0
-------------------------------------------
-Getting size =
-4
-At address =
-0x600000000501
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000509
-------------------------------------------
-Getting size =
-40
-At address =
-0x60000000052a
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000532
-------------------------------------------
-Getting size =
-40959712
-At address =
-0x600000000673
-------------------------------------------
-Getting used flag =
-0
-At address =
-0x60000000067b
-------------------------------------------
-Adding new metadata
-At address
-0x60000000069c
-Storing size =
-40959699
-At address =
-0x60000000069c
-------------------------------------------
-Storing size =
-4
-At address =
-0x600000000673
-------------------------------------------
-Storing flag =
-250
-At address =
-0x60000000067b
-------------------------------------------
-Dynamic mem allocated at address :
-0x60000000067c
-Storing flag =
-0
-At address =
-0x600000000225
-------------------------------------------
-Getting size =
-4
-At address =
-0x60000000021d
-------------------------------------------
-Freeing dynamic mem allocated for string of size
-4
-Storing size =
-196
-At address =
-0x600000000003
-------------------------------------------
-Setting new size used
-196
-At address
-0x600000000003
-Storing flag =
-0
-At address =
-0x6000000000dc
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000000d4
-------------------------------------------
-Freeing size
-40
-Freeing dynamic mem allocated at
-0x6000000000dd
-Storing size =
-156
-At address =
-0x600000000003
-------------------------------------------
-Setting new size used
-156
-At address
-0x600000000003
-Malloc occured for size =
-40
-Storing size =
-196
-At address =
-0x600000000003
-------------------------------------------
-Getting size =
-24
-At address =
-0x60000000000b
-------------------------------------------
-Getting used flag =
-250
-At address =
-0x600000000013
-------------------------------------------
-Getting size =
-40
-At address =
-0x6000000000d4
-------------------------------------------
-Getting used flag =
 0
 At address =
 0x6000000000dc
@@ -787,10 +750,11 @@ At address =
 ------------------------------------------
 Dynamic mem allocated at address :
 0x6000000000dd
+------------------------------------------
 Malloc occured for size =
 4
 Storing size =
-200
+156
 At address =
 0x600000000003
 ------------------------------------------
@@ -831,6 +795,7 @@ At address =
 ------------------------------------------
 Dynamic mem allocated at address :
 0x600000000226
+------------------------------------------
 Storing flag =
 0
 At address =
@@ -843,13 +808,15 @@ At address =
 ------------------------------------------
 Freeing dynamic mem allocated for string of size
 4
+Stored at
+0x600000000226
 Storing size =
-196
+152
 At address =
 0x600000000003
 ------------------------------------------
 Setting new size used
-196
+152
 At address
 0x600000000003
 Storing flag =
@@ -866,13 +833,94 @@ Freeing size
 40
 Freeing dynamic mem allocated at
 0x6000000000dd
+------------------------------------------
+Storing size =
+112
+At address =
+0x600000000003
+------------------------------------------
+Setting new size used
+112
+At address
+0x600000000003
+Malloc occured for size =
+40
+Storing size =
+152
+At address =
+0x600000000003
+------------------------------------------
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x6000000000dc
+------------------------------------------
+Storing flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Dynamic mem allocated at address :
+0x6000000000dd
+------------------------------------------
+Malloc occured for size =
+4
 Storing size =
 156
 At address =
 0x600000000003
 ------------------------------------------
-Setting new size used
-156
-At address
-0x600000000003
+Getting size =
+24
+At address =
+0x60000000000b
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x600000000013
+------------------------------------------
+Getting size =
+40
+At address =
+0x6000000000d4
+------------------------------------------
+Getting used flag =
+250
+At address =
+0x6000000000dc
+------------------------------------------
+Getting size =
+4
+At address =
+0x60000000021d
+------------------------------------------
+Getting used flag =
+0
+At address =
+0x600000000225
+------------------------------------------
+Storing flag =
+250
+At address =
+0x600000000225
+------------------------------------------
+Dynamic mem allocated at address :
+0x600000000226
+------------------------------------------
 SCM Closing

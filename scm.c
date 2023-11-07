@@ -338,6 +338,8 @@ void scm_free_const(struct scm *scm, const void *p){
     /* Log shit*/
     print("Freeing dynamic mem allocated for string of size");
     printsize(chunk_size);
+    print("Stored at");
+    printmem_const(p);
 
     /* remove chunk size from total size*/
     total_size = scm->size;

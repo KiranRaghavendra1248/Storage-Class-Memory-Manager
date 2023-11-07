@@ -85,6 +85,17 @@ void printmem(void * p){
     fclose(f);
 }
 
+void printmem_const(const void * p){
+    FILE *f;
+    f = fopen("output.txt", "a");
+    if (f == NULL) {
+        TRACE("Failed to open file");
+        return;
+    }
+    fprintf(f,"%p\n",p);
+    fclose(f);
+}
+
 void printsize(size_t size){
     char buffer[200];
     snprintf(buffer, sizeof(buffer), "%lu", size);

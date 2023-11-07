@@ -17,4 +17,5 @@ int add_chunk(char* address, size_t old_chunk_size, size_t size);
 bool check_used(uint8_t * address);
 void set_used(uint8_t * address, uint8_t value);
 void* increment_by_chunk_metadata(void* address);
+void printmem_const(const void * p);
 #endif /* _AVL_H_ */
