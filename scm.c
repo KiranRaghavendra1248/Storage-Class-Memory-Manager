@@ -235,6 +235,7 @@ void *scm_malloc(struct scm *scm, size_t n)
         set_used((uint8_t*)(curr_block_size_ptr+1), 250);
         print("Dynamic mem allocated at address :");
         printmem(traverse);
+        print("------------------------------------------");
         return (void*)traverse;
     }
 }
@@ -307,6 +308,7 @@ void scm_free(struct scm *scm, void *p){
     printsize(chunk_size);
     print("Freeing dynamic mem allocated at");
     printmem(p);
+    print("------------------------------------------");
 
     /* remove chunk size from total size*/
     total_size = scm->size;
