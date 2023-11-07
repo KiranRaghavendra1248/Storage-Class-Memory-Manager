@@ -286,6 +286,10 @@ char *scm_strdup(struct scm *scm, const char *s)
 
     length = string_length(s);
     new_string = (char *)scm_malloc(scm, length);
+    if(!new_string){
+        TRACE("Strdup failed");
+        return NULL;
+    }
     memcpy(new_string, s, length);
     return new_string;
 }
